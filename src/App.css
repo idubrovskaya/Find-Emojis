@@ -1,0 +1,11 @@
+* {
+  font-family: 'Dancing Script', cursive;
+}
+
+body {
+  background: rgb(238, 174, 221);
+}
+
+.App {
+  text-align: center;
+}
