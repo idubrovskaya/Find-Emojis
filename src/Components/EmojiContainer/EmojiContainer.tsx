@@ -1,13 +1,13 @@
-import { Form } from '../Form/Form';
 import { EmojiRow } from '../EmojiRow/EmojiRow';
+import { Form } from '../Form/Form';
 import { emojies } from '../Emojis';
 import { useState } from 'react';
 
 export const EmojiContainer = () => {
   const [emojiSearch, setEmojiSearch] = useState<string>('');
 
-  const chooseEmoji = (emojiTitle: string) => {
-    setEmojiSearch(emojiTitle);
+  const chooseEmoji = (emojiText: string) => {
+    setEmojiSearch(emojiText);
   };
 
   const filteredEmojis = emojies.filter((emoji) => {
@@ -19,7 +19,7 @@ export const EmojiContainer = () => {
 
   return (
     <div>
-      <Form emojiTitle={emojiSearch} emojiSearch={chooseEmoji} />
+      <Form emojiText={emojiSearch} emojiSearch={chooseEmoji} />
       {filteredEmojis.map((emoji) => (
         <EmojiRow icon={emoji.symbol} name={emoji.title} />
       ))}

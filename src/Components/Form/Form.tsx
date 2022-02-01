@@ -1,16 +1,16 @@
 import styles from './Form.module.css';
 
 interface IProps {
-  emojiTitle: string;
+  emojiText: string;
   emojiSearch: (text: string) => void;
 }
 
-export const Form = ({ emojiTitle, emojiSearch }: IProps) => {
+export const Form = ({ emojiText, emojiSearch }: IProps) => {
   return (
     <div className={styles.form}>
       <input
         className={styles.input}
-        value={emojiTitle}
+        value={emojiText}
         onChange={(event) => emojiSearch(event.target.value)}
       />
     </div>

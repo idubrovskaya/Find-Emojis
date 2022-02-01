@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import { EmojiContainer } from './Components/EmojiContainer/EmojiContainer';
+import { EmojiContainer } from './components/EmojiContainer/EmojiContainer';
 
 function App() {
   return (
